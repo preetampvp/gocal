@@ -7,7 +7,7 @@ import (
 
 func main() {
 	app := tview.NewApplication()
-	calculator := calculator.NewCalculator()
+	calculator := calculator.NewCalculator(app)
 	if err := app.SetRoot(calculator, true).Run(); err != nil {
 		panic(err)
 	}
